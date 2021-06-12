@@ -5,7 +5,20 @@ body {
 }
 .container {
   max-width: 1140px;
+  width: 90%;
   margin: auto;
+}
+
+.img {
+  max-width: 100%;
+}
+
+.venom {
+  position: absolute;
+  top: 0;
+  right: 0;
+  max-width: 728px;
+  width: 40%;
 }
 
 .header {
@@ -41,19 +54,23 @@ body {
   font-size: 24px;
   line-height: 28px;
   color: rgba(255, 255, 255, 0.8);
-  margin-bottom: 38px;
+  margin-bottom: 2%;
+}
+
+.film-logo {
+  max-width: 70%;
 }
 
 .film-description {
-  font-size: 16px;
+  font-size: 16;
   line-height: 140%;
   color: rgba(255, 255, 255, 0.8);
   max-width: 423px;
-  margin-top: 40px;
+  margin-top: 3%;
 }
 
 .button-group {
-  margin-top: 70px;
+  margin-top: 5%;
 }
 
 .button {
@@ -64,7 +81,8 @@ body {
   cursor: pointer;
 }
 
-.button-text, .button-icon {
+.button-text,
+.button-icon {
   display: inline-block;
   vertical-align: middle;
 }
@@ -76,7 +94,7 @@ body {
 }
 
 .button-primary {
-  color: #8D0019;
+  color: #8d0019;
   background-color: #fff;
 }
 
@@ -84,14 +102,9 @@ body {
   color: #fff;
 }
 
-.venom {
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
 .blood {
-  background: url(../img/blood.png) no-repeat top right, #14131a url(../img/background.png) no-repeat center center / 100%;
+  background: url(../img/blood.png) no-repeat top right / 70%,
+    #14131a url(../img/background.png) no-repeat center center / 100%;
 }
 
 .primary-bg {
@@ -183,10 +196,120 @@ body {
   margin-bottom: 5px;
 }
 
-
-
 .poster-wrapper .list {
   margin: 0;
   margin-bottom: 20px;
-  
+}
+
+.menu-button {
+  display: none;
+}
+
+.menu-popup {
+  display: none;
+}
+
+.menu-popup_active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  background-color: #fff;
+  color: #14131a;
+}
+
+.menu-popup-hidden {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 10%;
+  right: 1%;
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.menu-popup-hidden-text {
+  margin-right: 15%;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.menu-popup-list {
+  font-size: 14px;
+  line-height: 16px;
+  color: #14131a;
+  list-style-type: none;
+}
+
+.menu-popup-list li {
+  margin-bottom: 15px;
+}
+
+@media (max-width: 1024px) {
+  .content {
+    flex-direction: column;
+    margin-bottom: 5%;
+  }
+  .col {
+    margin-bottom: 5%;
+  }
+}
+
+@media (max-width: 768px) {
+  .blood {
+    background: #14131a;
+  }
+  .venom {
+    top: 20%;
+  }
+  .header {
+    margin-bottom: 4%;
+  }
+  .film {
+    margin-top: 20%;
+  }
+}
+
+@media (max-width: 576px) {
+  .nav {
+    margin-left: auto;
+  }
+  .nav-menu {
+    display: none;
+  }
+  .menu-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: none;
+    background-color: #14131a;
+    cursor: pointer;
+    color: #fff;
+  }
+  .menu-button-text {
+    margin-right: 10px;
+  }
+  .button-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .film-text {
+    text-align: center;
+  }
+  .poster-wrapper {
+    flex-direction: column;
+  }
+  .poster {
+    margin-bottom: 4%;
+  }
 }
