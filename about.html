@@ -17,7 +17,7 @@
         <img width="46px" height="71px" src="img/logo.png" alt="logo" class="logo-image">
       </a>
       <nav class="nav">
-        <button class="menu-button">
+        <button class="menu-button" id="menu-btn">
           <span class="menu-button-text">меню</span>
           <img src="img/menu.svg" alt="icon: burger-menu" class="menu-button-icon">
         </button>
@@ -90,5 +90,26 @@
     <!-- /.content -->
   </div>
   <!-- /.container -->
+  <div class="menu-popup" id="menu-pop">
+    <ul class="menu-popup-list">
+      <li class="menu-popup-list-item"><a href="about.html" class="menu-popup-list-link">о фильме</a></li>
+      <li class="menu-popup-list-item"><a href="#" class="menu-popup-list-link">трейлер</a></li>
+      <li class="menu-popup-list-item"><a href="#" class="menu-popup-list-link">актеры</a></li>
+      <li class="menu-popup-list-item"><a href="#" class="menu-popup-list-link">премьера</a></li>
+    </ul>
+    <button class="menu-popup-hidden" id="menu-popup-hidden">
+      <span class="menu-popup-hidden-text">закрыть</span>
+      <img src="img/close-icon.svg" alt="icon: close" class="menu-popup-hidden-close-icon">
+    </button>
+  </div>
 </body>
+
+<script>
+    document.getElementById('menu-btn').onclick = function () {
+      document.getElementById('menu-pop').classList.add('menu-popup_active');
+    }
+    document.getElementById('menu-popup-hidden').onclick = function () {
+        document.getElementById('menu-pop').classList.remove('menu-popup_active');
+      }
+  </script>
 </html>

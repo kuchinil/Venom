@@ -211,6 +211,7 @@ body {
 
 .menu-popup_active {
   display: flex;
+  opacity: 100%;
   justify-content: center;
   align-items: center;
   position: absolute;
@@ -250,6 +251,11 @@ body {
 
 .menu-popup-list li {
   margin-bottom: 15px;
+}
+
+.menu-popup-list-link {
+  text-decoration: none;
+  color: #14131a;
 }
 
 @media (max-width: 1024px) {
@@ -311,5 +317,30 @@ body {
   }
   .poster {
     margin-bottom: 4%;
+    margin-right: 0px;
+  }
+  .menu-popup {
+    text-align: center;
+  }
+  .film-logo {
+    max-width: 60%;
+  }
+  .film-description {
+    margin: 8% auto auto;
+  }
+}
+
+@media (max-width: 389px) {
+  .film-date {
+    font-size: 20px;
+  }
+  .poster {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 330px) {
+  .film-date {
+    font-size: 18px;
   }
 }
